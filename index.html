@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>Home | Nitro Client</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="img/logo.png" />
+</head>
+<body>
+
+	<div id="preloader"></div>
+
+	<div class="container">
+		<div class="navbar">
+			<img src="img/logo.png" class="logo">
+			<nav>
+				<ul id="menuList">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="downloads.html">Download</a></li>
+					<li><a href="features.html">Features</a></li>
+					<li><a href="socials.html">Socials</a></li>
+				</ul>
+			</nav>
+			<img src="img/menu.png" class="menu"
+			onclick="togglemenu()">
+		</div>
+
+		<div class="nitro">
+        <h1>Nitro</h1>
+        </div>
+
+        <div class="client">
+        <h1>Client</h1>
+        </div>
+
+        <div class="desc1">
+        <h1>Fast, Free And Easy To Use</h1>
+        </div>
+
+		<div class="button">
+        <a href="downloads.html" class="btn">Download</a>
+        <a href="features.html" class="btn">Learn More</a>
+        </div>
+
+	</div>
+
+	<script>
+		
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px")
+			{
+				menuList.style.maxHeight = "130px"
+			}
+		else
+			{
+				menuList.style.maxHeight = "0px"
+			}
+
+		}
+
+	</script>
+
+	<script>
+		
+		var loader = document.getElementById("preloader");
+
+		window.addEventListener("load", function(){
+			loader.style.display = "none";
+		})
+
+	</script>
+
+</body>
+</html>

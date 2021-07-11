@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>Socials | Nitro Client</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="img/logo.png" />
+</head>
+<body>
+
+	<div id="preloader"></div>
+
+	<div class="container">
+		<div class="navbar">
+			<img src="img/logo.png" class="logo">
+			<nav>
+				<ul id="menuList">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="downloads.html">Download</a></li>
+					<li><a href="features.html">Features</a></li>
+					<li class="active"><a href="socials.html">Socials</a></li>
+				</ul>
+			</nav>
+			<img src="img/menu.png" class="menu"
+			onclick="togglemenu()">
+		</div>
+
+		<div class="buttondc">
+        <a href="https://discord.gg/mDqgxN5d4N" class="btn">Discord</a>
+        </div>
+
+        <div class="join">
+        <h1>Join The Discord</h1>
+        </div>
+
+	</div>
+
+	<script>
+		
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px")
+			{
+				menuList.style.maxHeight = "130px"
+			}
+		else
+			{
+				menuList.style.maxHeight = "0px"
+			}
+
+		}
+
+	</script>
+
+	<script>
+		
+		var loader = document.getElementById("preloader");
+
+		window.addEventListener("load", function(){
+			loader.style.display = "none";
+		})
+
+	</script>
+
+</body>
+</html>
