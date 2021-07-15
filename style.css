@@ -1,4 +1,5 @@
 *{
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -51,12 +52,19 @@ nav ul li a{
 	color: #000;
 	font-size: 14px;
 	transition: 0.6 ease;
+	border: 1px solid #fff;
+	border-radius: 27px;
+    padding: 5px 20px;
+    color: #fff;
+	transition: 0.5s ease;
 }
 nav ul li a:hover{
-	color: #a6f9ff;
+	background-color: #fff;
+	color: #000;
 }
 nav ul li.active a{
-	color: #a6f9ff;
+	background-color: #fff;
+	color: #000;
 }
 
 .button {
@@ -124,7 +132,7 @@ nav ul li.active a{
 
 .join{
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%,-110%);
 }
@@ -156,6 +164,97 @@ nav ul li.active a{
 .features h1{
 	color: black;
 	font-size: 30px;
+}
+
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	transform-style: preserve-3d;
+	width: 1100px;
+}
+
+section .card{
+	position: relative;
+	width: 320px;
+	height: 320px;
+	margin: 20px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+
+section .card .box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: 1s ease;
+}
+
+section .card:hover .box{
+	transform: rotateY(180deg);
+}
+
+section .card .box .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section .card .box .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+section .card .box .contentBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
+
+section .card .box .contentBx div{
+	transform-style: preserve-3d;
+	padding: 20px;
+	background: linear-gradient(45deg, #00a1fe,#583bff);
+	transform: translateZ(100px);
+}
+
+section .card .box .contentBx div h2{
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+section .card .box .contentBx div p{
+	color: #fff;
+	font-size: 16px;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
 }
 
 @media only screen and (max-width:700px){
