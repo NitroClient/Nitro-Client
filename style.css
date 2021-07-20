@@ -154,6 +154,18 @@ nav ul li.active a{
 	font-size: 50px;
 }
 
+.spotify{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-110%);
+}
+
+.spotify h1{
+	color: rgb(30, 215, 96);
+	font-size: 50px;
+}
+
 .features{
 	position: absolute;
     top: 50%;

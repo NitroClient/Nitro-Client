@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nitro Client - Spotify</title>
-    <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>Spotify | Nitro Client</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="img/logo.png" />
 </head>
 <body>
-    <header>
-        <div class="main">
-            <div class="logo">
-                <img src = "logo.png">
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="downloads.html">Downloads</a></li>
-                <li><a href="about.html">About The Client</a></li>
-                <li><a href="socials.html">Socials</a></li>
-            </ul>
+
+	<div class="footer">
+	<p> &copy; Copyright <script>document.write(new Date().getFullYear())</script> Nitro Client All Rights Reserved.</p>
+    </div>
+
+	<div id="preloader"></div>
+
+	<div class="container">
+
+        <div class="spotify">
+            <h1>Spotify Connected !</h1>
         </div>
 
-        <div class="titlespotify">
-            <h1>Spotify Connected</h1>
-        </div>
+	</div>
 
-    </header>
+	<script>
+		
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px")
+			{
+				menuList.style.maxHeight = "130px"
+			}
+		else
+			{
+				menuList.style.maxHeight = "0px"
+			}
+
+		}
+
+	</script>
+
+	<script>
+		
+		var loader = document.getElementById("preloader");
+
+		window.addEventListener("load", function(){
+			loader.style.display = "none";
+		})
+
+	</script>
+
 </body>
 </html>
